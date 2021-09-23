@@ -63,6 +63,33 @@ function capitalizeString (word)
  
 
 // -Eine Funktion mit der wir den benutzernamen generieren und auf die ergebnisse der anderen funktion zugreifen
+
+/**
+ * @function 
+ * @param {*} maxNamber 
+ * @returns 
+ */
+
+function createRandomUserName (maxNamber)
+{
+    const words = getWords();
+
+   const adj = words.adjs[ Math.floor(Math.random() * (words.adjs.length -1))]
+
+   const noun = words.nouns[ Math.floor(Math.random() * (words.nouns.length -1))]
+  
+   const randomNumber = createRandomNumber(10000, maxNamber);
+
+   const finalUserName = `${ capitalizeString(adj) }${ capitalizeString(noun) }${ maxNamber !== 0 ? randomNumber : ''}`;
+
+   return finalUserName;
+
+
+}
+
+
+
+
 // -Eine export, um die Applikation in einer anderen datei zu nutzennod
 
 
