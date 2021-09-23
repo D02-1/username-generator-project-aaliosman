@@ -35,7 +35,7 @@ function createRandomNumber (minNumber, maxNumber)
 
     return num;
 }
-createRandomNumber(10000, 50000);
+
 
 
 // -Eine Funktion mit der wir den ersten Buchstaben des jeweligen Wirtes groß schreiben (PascalCase)
